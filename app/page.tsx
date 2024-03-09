@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -17,12 +18,16 @@ export default function Home() {
         </p>
         {/* Login and SignUp buttons */}
         <div className="flex flex-row gap-3 m-5 justify-center md:justify-start">
-          <Button variant={'default'}>
-            Login
-          </Button>
-          <Button variant={'default'}>
-            Sign Up
-          </Button>
+          <Link href={'/login'}>
+            <Button variant={'default'}>
+              Login
+            </Button>
+          </Link>
+          <Link href={'/signup'}>
+            <Button variant={'default'}>
+              Sign Up
+            </Button>
+          </Link>
         </div>
         
       </div>
